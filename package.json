@@ -1,0 +1,58 @@
+{
+  "name": "@twin.techies/india-pincode",
+  "version": "0.1.2",
+  "description": "Offline Indian pincode lookup library — 23k+ pincodes, 40k+ post offices bundled. Synchronous API, zero runtime dependencies, full TypeScript support.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "data/pincodes.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "bun test",
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && npm publish --access public"
+  },
+  "keywords": [
+    "india",
+    "pincode",
+    "postal-code",
+    "zipcode",
+    "address",
+    "autocomplete",
+    "india-post",
+    "indian-pincode"
+  ],
+  "author": "Twintechies",
+  "license": "MIT",
+  "homepage": "https://github.com/TwinTricks/india-pincode#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TwinTricks/india-pincode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TwinTricks/india-pincode/issues"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.9.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
