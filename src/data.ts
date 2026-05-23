@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
 
 interface CompactDataset {
   version: number;
@@ -10,17 +10,17 @@ interface CompactDataset {
   cityIndex: Record<string, string[]>;
 }
 
+declare const __dirname: string | undefined;
+
 let cached: CompactDataset | null = null;
 
 function resolveDataPath(): string {
   if (typeof __dirname !== 'undefined') {
     return resolve(__dirname, '../data/pincodes.json');
   }
-  const here = dirname(fileURLToPath(import.meta.url));
-  return resolve(here, '../data/pincodes.json');
+  const url: string = (0, eval)('import.meta.url');
+  return resolve(dirname(fileURLToPath(url)), '../data/pincodes.json');
 }
-
-declare const __dirname: string;
 
 export function loadDataset(): CompactDataset {
   if (cached) return cached;
