@@ -1,14 +1,22 @@
 # @twin.techies/india-pincode
 
 [![npm](https://img.shields.io/npm/v/@twin.techies/india-pincode.svg)](https://www.npmjs.com/package/@twin.techies/india-pincode)
+[![Live Demo](https://img.shields.io/badge/live%20demo-storybook-ff4785)](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-lookup--default)
 [![Try on RunKit](https://badge.runkitcdn.com/@twin.techies/india-pincode.svg)](https://npm.runkit.com/@twin.techies/india-pincode)
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/fork/node?title=india-pincode-demo&description=Try%20%40twin.techies%2Findia-pincode%20in%20your%20browser)
 
 Offline Indian pincode lookup library — **23,915 pincodes** and **39,736 post offices** bundled. Zero network calls at runtime, zero runtime dependencies, fully synchronous API.
 
 ## 🚀 Try it live (no install)
 
-**[Open RunKit playground →](https://npm.runkit.com/@twin.techies/india-pincode)** — paste this in:
+**[👉 Interactive playground on Storybook](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-lookup--default)** — search real pincodes, see results instantly, no setup.
+
+Stories available:
+- [Pincode Lookup](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-lookup--default) — type a pincode → state, district, all post offices
+- [City Search](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-city-search--default) — fuzzy / prefix search by city name
+- [Form Autofill](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-form-autofill--default) — checkout-form auto-fill pattern
+- [Format Validation](https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/?path=/story/pincode-format-validation--default) — live `isValidPincode` examples
+
+Or **[open a RunKit notebook →](https://npm.runkit.com/@twin.techies/india-pincode)** and paste:
 
 ```js
 const { getByPincode, searchByCity } = require('@twin.techies/india-pincode');

@@ -2,6 +2,12 @@
 
 All notable changes to `@twin.techies/india-pincode` will be documented here.
 
+## [0.1.4] - 2026-05-24
+
+### Added
+- **Live interactive demo** at https://6a132a7cd42582454e1f297c-tfbgytflvw.chromatic.com/ — Storybook playgrounds for pincode lookup, city search, form autofill, and format validation. No install required.
+- README badges and per-story deep links to the live demo.
+
 ## [0.1.3] - 2026-05-23
 
 ### Fixed
