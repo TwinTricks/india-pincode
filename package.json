@@ -1,6 +1,6 @@
 {
   "name": "@twin.techies/india-pincode",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Offline Indian pincode lookup library — 23k+ pincodes, 40k+ post offices bundled. Synchronous API, zero runtime dependencies, full TypeScript support.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -55,5 +55,9 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
